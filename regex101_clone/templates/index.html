@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>regex101</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+        
+                <h2 class="text-center">RegeX101(Backend Project 1)</h2><br>
+                <form>
+                    <label for="target">TEST STRING : </label><br>
+                    <textarea name="target" id="" cols="70" rows="5" placeholder="insert your test string here" class="form-control" required></textarea><br>
+                    <label for="regex">REGULAR EXPRESSION : </label><br>
+                    <input type="text" name="regex" size="65" placeholder="insert your regular expression here" class="form-control" required><br>
+                    <button class="bg-success text-white " > Check </button> 
+
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <br>
+                <h3>Matches :</h3>
+                {% if result %}
+                <hr>
+                <ul>
+                    <li>{{result}}</li><br>
+                    <li>Number of the matches : {{length}}</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Entered String : {{target}}</li><br>
+                    <li>Entered Pattern: {{regex}}</li>
+                </ul>
+                <hr>
+                {% else %}
+                <p>No Match found!!!</p>
+                {% endif %}
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
